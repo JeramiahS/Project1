@@ -16,4 +16,8 @@ public class Movie extends MotionPicture {
         return duration;
     }
 
+    @Override
+    public String toString() {
+        return "Movie: " + title;
+    }
 }

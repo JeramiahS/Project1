@@ -33,7 +33,7 @@ public class MediaFactory {
         int releaseYear = Integer.parseInt(attributes[4]);
         String genre = attributes[5];
         String publisher = attributes[6];
-        int copiesSold = Integer.parseInt(attributes[7]);
+        double copiesSold = Double.parseDouble(attributes[7]);
 
         return new VideoGame(id, title, platform, releaseYear, genre, publisher, copiesSold);
     }
@@ -50,4 +50,5 @@ public class MediaFactory {
 
         return new MusicAlbum(id, releaseYear, artist, title, globalSales, numOfTracks, duration, genre);
     }
+
 }
