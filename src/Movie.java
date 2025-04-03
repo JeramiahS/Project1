@@ -1,8 +1,9 @@
 public class Movie extends MotionPicture {
     protected int duration;
 
-    public Movie(String id, String title, String director, String country, int releaseYear, String rating, int duration, String description) {
+    public Movie(String id, String type, String title, String director, String country, int releaseYear, String rating, int duration, String description) {
         this.id = id;
+        this.type = type;
         this.title = title;
         this.director = director;
         this.country = country;
@@ -18,6 +19,6 @@ public class Movie extends MotionPicture {
 
     @Override
     public String toString() {
-        return "Movie: " + title;
+        return "ID: " + id + ", " + type + ", " + "'" + title + "'" + " by " + director;
     }
 }

@@ -2,8 +2,9 @@ public class VideoGame extends Media {
     private String platform, genre, publisher;
     double copiesSold;
 
-    public VideoGame(String id, String title, String platform, int releaseYear, String genre, String publisher, double copiesSold) {
+    public VideoGame(String id, String type, String title, String platform, int releaseYear, String genre, String publisher, double copiesSold) {
         this.id = id;
+        this.type = type;
         this.title = title;
         this.platform = platform;
         this.releaseYear = releaseYear;
@@ -30,7 +31,7 @@ public class VideoGame extends Media {
 
     @Override
     public String toString() {
-        return "Video Game: " + title;
+        return "ID: " + id + ", " + type + ", " + "'" + title + "'" + " published by " + publisher;
     }
 
 }

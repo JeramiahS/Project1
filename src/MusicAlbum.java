@@ -1,10 +1,11 @@
 public class MusicAlbum extends Media {
     private String artist, genre;
-    private int numOfTracks;
-    private double globalSales, duration;
+    private int globalSales, numOfTracks;
+    private double duration;
 
-    public MusicAlbum(String id, int releaseYear, String artist, String title, double globalSales, int numOfTracks, double duration, String genre) {
+    public MusicAlbum(String id, String type, int releaseYear, String artist, String title, int globalSales, int numOfTracks, double duration, String genre) {
         this.id = id;
+        this.type = type;
         this.releaseYear = releaseYear;
         this.artist = artist;
         this.title = title;
@@ -22,7 +23,7 @@ public class MusicAlbum extends Media {
         return genre;
     }
 
-    public double getGlobalSales() {
+    public int getGlobalSales() {
         return globalSales;
     }
 
@@ -30,12 +31,12 @@ public class MusicAlbum extends Media {
         return numOfTracks;
     }
 
-    private double getDuration() {
+    public double getDuration() {
         return duration;
     }
 
     @Override
     public String toString() {
-        return id + " Music Album: " + title;
+        return "ID: " + id + ", " + type + ", '" + title + "' by " + artist;
     }
 }

@@ -1,8 +1,9 @@
 public class TVShow extends MotionPicture{
     String numOfSeasons;
 
-    public TVShow(String id, String title, String director, String country, int releaseYear, String rating, String numOfSeasons, String description) {
+    public TVShow(String id, String type, String title, String director, String country, int releaseYear, String rating, String numOfSeasons, String description) {
         this.id = id;
+        this.type = type;
         this.title = title;
         this.director = director;
         this.country = country;
@@ -18,7 +19,7 @@ public class TVShow extends MotionPicture{
 
     @Override
     public String toString() {
-        return "TV Show: " + title;
+        return "ID: " + id + ", " + type + ", " + "'" + title + "'" + " by " + director;
     }
 
 }
